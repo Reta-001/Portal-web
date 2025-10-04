@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Salón de Belleza - Estilo y Elegancia",
+  title: "GITHUB",
   description: "Salón de belleza profesional con los mejores cortes, tratamientos y servicios de peluquería",
 };
 
