@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* src/app/globals.css */
+
+/* --- Estilos para la página de Cortes --- */
+
+/* Estilo para la sección del título */
+.hero-cortes {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f9f9f9; /* Un fondo suave para destacar la sección */
+}
+
+.hero-cortes h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero-cortes p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilo para la galería de imágenes */
+.cortes-gallery {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* La rejilla (grid) que ordena las tarjetas */
+.cortes-grid {
+  display: grid;
+  /* Esto crea columnas que se ajustan solas al tamaño de la pantalla. ¡Es responsivo! */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; /* Espacio entre las tarjetas */
+}
+
+/* Estilo para cada tarjeta de servicio */
+.corte-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.corte-card:hover {
+  transform: translateY(-5px); /* Efecto de levitar al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.corte-card img {
+  width: 100%;
+  height: auto;
+  display: block; /* Elimina un pequeño espacio debajo de la imagen */
+}
+
+.corte-card .card-content {
+  padding: 1.5rem;
+}
+
+.corte-card h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.corte-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.corte-card .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #c2185b; /* Un color magenta para el precio */
+  margin-top: 1rem;
+  text-align: right;
+}
