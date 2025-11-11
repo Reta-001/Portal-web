@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
@@ -23,34 +24,34 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#inicio" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
+                <Link href="/" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
                   Inicio
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#servicios" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
+                <Link href="/#servicios" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
                   Servicios
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#cortes" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
+                <Link href="/cortes" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
                   Cortes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#nosotros" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
+                <Link href="/nosotros" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
                   Nosotros
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#reservas" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
+                <Link href="/#reservas" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
                   Reservas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contacto" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
+                <Link href="/#contacto" className="text-gray-400 hover:text-[#c9a857] transition-colors text-sm">
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

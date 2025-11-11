@@ -1,15 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
-  const scrollToReservas = () => {
-    const element = document.querySelector('#reservas');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-[#1c1b1b]">
@@ -53,20 +48,21 @@ export default function Hero() {
           te brindan una experiencia única con técnicas modernas y productos de primera calidad.
         </motion.p>
 
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={scrollToReservas}
-          className="bg-[#c9a857] hover:bg-[#d4af37] text-[#1c1b1b] font-bold py-4 px-8 sm:px-12 rounded-full text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-[#c9a857]/40 relative overflow-hidden group"
-        >
-          <span className="relative z-10 flex items-center">
-            Reserva tu cita ahora
-            <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
-          </span>
-        </motion.button>
+        <Link href="/agendar">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[#c9a857] hover:bg-[#d4af37] text-[#1c1b1b] font-bold py-4 px-8 sm:px-12 rounded-full text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-[#c9a857]/40 relative overflow-hidden group"
+          >
+            <span className="relative z-10 flex items-center">
+              Reserva tu cita ahora
+              <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
+            </span>
+          </motion.button>
+        </Link>
       </div>
 
       {/* Scroll indicator */}
